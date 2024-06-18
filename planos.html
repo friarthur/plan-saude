@@ -269,14 +269,19 @@
         <div class="container">
             <p>&copy; 2024 Convênio Saúde. Todos os direitos reservados.</p>
             <div class="social-media">
-                <a href="#"><img src="/src/face.png" alt="Facebook"></a>
-                <a href="#"><img src="/src/insta.png" alt="Instagram"></a>
-                <a href="#"><img src="/src/tt.png" alt="Twitter"></a>
+                <a href="#"><img src="face.png" alt="Facebook"></a>
+                <a href="#"><img src="insta.png" alt="Instagram"></a>
+                <a href="#"><img src="tt.png" alt="Twitter"></a>
             </div>
         </div>
     </footer>
 
-    <script src="planos.js"></script>
+    <script src="planos.js">
+         document.querySelector('.burger').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelector('.burger').classList.toggle('active');
+    });
+    </script>
 </body>
 
 </html>

@@ -111,10 +111,12 @@ button:hover {
         flex-direction: column;
         background: linear-gradient(to bottom, white 50%, #53a153 50%);
     }
-
+    .img {
+        display: none; /* Esconder a imagem em telas menores */
+    }
     .login-container {
-        margin: 20px 10px;
         padding: 20px;
+        margin-top: 20px;
     }
 
     h1 {

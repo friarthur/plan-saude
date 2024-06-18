@@ -14,8 +14,8 @@ body {
 }
 
 header {
-    background: white; /* Cor de fundo verde escuro */
-    color: #fff; /* Cor do texto branco */
+    background: white; 
+    color: #fff; 
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
@@ -40,7 +40,7 @@ header h1 {
 }
 
 header h1 strong {
-    color: red; /* Cor verde brilhante para o strong */
+    color: red; 
 }
 
 nav {
@@ -64,19 +64,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000; /* Cor do texto verde escuro */
+    color: #000000; 
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    padding: 10px 15px; /* Espaçamento interno dos links */
-    border-radius: 5px; /* Borda arredondada nos links */
+    padding: 10px 15px; 
+    border-radius: 5px; 
 }
 
 nav ul li a:hover {
-    color: #fbfffb; /* Cor verde brilhante ao passar o mouse */
-    background-color: #070707; /* Fundo branco ao passar o mouse */
+    color: #fbfffb; 
+    background-color: #070707; 
 }
 .banner {
-    background: url('/src/meico.png') no-repeat center center/cover;
+    background: url('meico.png') no-repeat center center/cover;
     color: white;
     height: 100vh;
     display: flex;
@@ -375,7 +375,7 @@ nav ul li a:hover {
 .contact form .form-group label {
     position: absolute;
     top: 50%;
-    left: 10px; /* Defina o valor adequado para a posição à esquerda */
+    left: 10px; 
     transform: translateY(-50%);
     color: #999;
     font-size: 16px;
@@ -458,7 +458,7 @@ footer p {
     transform: scale(1.2);
 }
 .burger {
-    display: none; /* Inicialmente escondido em telas maiores */
+    display: none; 
     cursor: pointer;
 }
 
@@ -478,14 +478,14 @@ footer p {
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
     .burger {
-        display: block; /* Mostra o menu hambúrguer */
+        display: block; 
     }
 
     .nav-links {
-        display: none; /* Esconde a lista de links */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 80px; /* Ajuste conforme o cabeçalho */
+        top: 80px; 
         right: 0;
         background-color: #fff;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -495,8 +495,7 @@ footer p {
     }
 
     .nav-links.active {
-        display: flex; /* Mostra a lista de links */
-    }
+        display: flex; 
 
     .burger.active .line:nth-child(1) {
         transform: translateY(8px) rotate(45deg);

@@ -13,8 +13,8 @@ body {
 }
 
 header {
-    background: white; /* Cor de fundo verde escuro */
-    color: #fff; /* Cor do texto branco */
+    background: white; 
+    color: #fff; 
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
@@ -39,7 +39,7 @@ header h1 {
 }
 
 header h1 strong {
-    color: red; /* Cor verde brilhante para o strong */
+    color: red; 
 }
 
 nav {
@@ -63,20 +63,20 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000; /* Cor do texto verde escuro */
+    color: #000000; 
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    padding: 10px 15px; /* Espaçamento interno dos links */
-    border-radius: 5px; /* Borda arredondada nos links */
+    padding: 10px 15px; 
+    border-radius: 5px; 
 }
 
 nav ul li a:hover {
-    color: #fbfffb; /* Cor verde brilhante ao passar o mouse */
-    background-color: #070707; /* Fundo branco ao passar o mouse */
+    color: #fbfffb; 
+    background-color: #070707; 
 }
 
 .hero {
-    background: url('/src/banner.png') no-repeat center center/cover;
+    background: url('banner.png') no-repeat center center/cover;
     color: white;
     height: 70vh;
     display: flex;
