@@ -43,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = "Redefinir Senha";
         $message = "Clique no link abaixo para redefinir sua senha:\n\n";
         $message .= "http://seusite.com/verificarCodigo.php?token=" . $token;
-        $headers = "From: planosaude@gmail.com";
+        $headers = "From: arthurfriburgo234@gmail.com";
         mail($to, $subject, $message, $headers);
 
         // Redirecionar para a página de verificação de código
-        header("Location: verificarCodigo.php?email=" . urlencode($email));
+        header("Location: mail.php?email=" . urlencode($email));
         exit();
     } else {
         $status = "E-mail não encontrado.";
@@ -69,7 +69,7 @@ $conn->close();
 <body>
     <div class="container">
         <h2>Esqueci Minha Senha</h2>
-        <form action="esqueciSenha.php" method="post">
+        <form action="mail.php" method="post">
             <div class="form-group">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>

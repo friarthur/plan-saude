@@ -54,7 +54,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saúde+ - Login</title>
-    <link rel="stylesheet" href="singup.css">
+    <link rel="stylesheet" href="/style/singup.css">
 </head>
 <body>
     <div class="img" style="margin: 0;">
