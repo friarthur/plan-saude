@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convênio Saúde+</title>
+    <link rel="icon" href="/src/logo-cli.png" type="image/png">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Saúde<strong>+</strong></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="nav" href="#">Início</a></li>
+                    <li><a class="nav" href="/html/planos.html">Planos</a></li>
+                    <li><a class="nav" href="/html/sobre.html">Sobre</a></li>
+                    <li><a class="nav" href="/html/login.html">Entrar</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Bem-vindo ao Convênio Saúde+</h1>
+                <p>Cuidando da sua saúde com excelência e dedicação</p>
+                <a href="#contact" class="cta-button">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa comprometida com a saúde e o bem-estar dos nossos clientes. Nossa missão é fornecer
+                serviços de saúde de alta qualidade e acessíveis para todos.</p>
+        </div>
+    </section>
+
+   
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Consultas Médicas</h3>
+                    <p>Agende suas consultas com nossos especialistas.</p>
+                </div>
+                <div class="card">
+                    <h3>Exames</h3>
+                    <p>Realize exames laboratoriais e de imagem com facilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Atendimento de Urgência</h3>
+                    <p>Atendimento de urgência disponível 24 horas por dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Benefícios do Plano</h2>
+            <ul>
+                <li>Ampla Rede de Clínicas e Hospitais</li>
+                <li>Descontos em Farmácias</li>
+                <li>Atendimento Domiciliar</li>
+                <li>Programa de Saúde Preventiva</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Depoimentos</h2>
+            <div class="testimonial-cards">
+                <div class="card">
+                    <p>"Ótimo atendimento e profissionais qualificados!"</p>
+                    <span>- João Silva</span>
+                </div>
+                <div class="card">
+                    <p>"Minha família e eu estamos muito satisfeitos com os serviços prestados."</p>
+                    <span>- Maria Oliveira</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão de Chat -->
+    <div class="chat-button" id="chatButton">
+        <img src="/src/slide 1.jpg 1.jpg" alt="Chat Icon">
+    </div>
+
+    <!-- Caixa de Chat -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h4>Chat Bot</h4>
+            <button class="close-chat" id="closeChat">&times;</button>
+        </div>
+        <div class="chat-content" id="chatContent">
+            <div class="message bot-message">Olá, como posso te ajudar?</div>
+            <div class="options">
+                <button class="option" id="planosSaude">Planos de Saúde</button>
+                <button class="option" id="comoFunciona">Como Funciona o Convênio</button>
+                <button class="option" id="nossosServicos">Nossos Serviços</button>
+                <button class="option" id="cancelamentoPlano">Cancelamento do Plano</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Seu Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Seu Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" required></textarea>
+                    <label for="message">Sua Mensagem</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Convênio Saúde. Todos os direitos reservados.</p>
+            <div class="social-media">
+                <a href="#"><img src="/src/face.png" alt="Facebook"></a>
+                <a href="#"><img src="/src/insta.png" alt="Instagram"></a>
+                <a href="#"><img src="/src/tt.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script/index.js"></script>
+</body>
+
+</html>

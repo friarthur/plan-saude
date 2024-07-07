@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Email</title>
+    <link rel="stylesheet" href="../style/email_verification.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Verificação de Email</h2>
+        <form action="../php/send_verification_email.php" method="POST">
+            <label for="emailUnimed">Digite seu email:</label>
+            <input type="email" id="emailUnimed" name="emailUnimed" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

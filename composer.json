@@ -1,0 +1,19 @@
+{
+    "name": "mycompany/prject-name",
+    "description": "personal project",
+    "require-dev": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mycompany\\PrjectName\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "friarthur",
+            "email": "arthurfriburgo234@gmail.com"
+        }
+    ],
+    "require": {}
+}

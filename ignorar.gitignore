@@ -1,0 +1,11 @@
+# Ignorar o arquivo de lock do Composer
+composer.lock
+
+# Ignorar o arquivo JSON do Composer
+composer.json
+
+# Ignorar a pasta de dependências do Composer
+vendor/
+
+# Ignorar o arquivo phar do Composer
+composer.phar

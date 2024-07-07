@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Concluído</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto;
+            margin-top: 20vh; 
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .container {
+            display: none; 
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container.show {
+            display: block; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="container">
+        <h2>Cadastro Concluído!</h2>
+        <p>Obrigado por se cadastrar. Agora você pode acessar todas as funcionalidades do nosso site.</p>
+        <a href="index.htm" class="btn">Voltar para a página inicial</a>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Aguarda o carregamento completo da página
+        document.addEventListener('DOMContentLoaded', function () {
+            const loader = document.querySelector('.loader');
+            const container = document.querySelector('.container');
+
+            // Simula um delay de 14 segundos (14000 milissegundos)
+            setTimeout(function () {
+                loader.style.display = 'none'; // Esconde o loader
+                container.classList.add('show'); // Mostra o container de conclusão
+            }, 10000); // 14 segundos
+        });
+    </script>
+</body>
+
+</html>
