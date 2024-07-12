@@ -23,23 +23,26 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.form-group {
+.verification-code {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1rem;
-    text-align: left;
+}
+
+.verification-code input {
+    width: 3rem;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    margin-left: 5px;
 }
 
 label {
     display: block;
     margin-bottom: 0.5rem;
     color: #333;
-}
-
-input {
-    width: calc(100% - 1rem);
-    padding: 0.5rem;
-    margin: 0 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
 button {

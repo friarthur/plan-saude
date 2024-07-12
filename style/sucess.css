@@ -1,11 +1,3 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos para o corpo e container principal */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
@@ -28,41 +20,24 @@ body {
 
 h2 {
     color: #00984A;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #333;
     margin-bottom: 1.5rem;
 }
 
-/* Estilos para formulário e grupos de formulário */
-.form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-input[type="password"] {
-    width: calc(100% - 1rem);
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button {
+a.btn {
     background-color: #00984A;
     color: white;
-    border: none;
+    text-decoration: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
-    cursor: pointer;
+    display: inline-block;
     transition: background-color 0.3s;
-    font-size: 1rem;
 }
 
-button:hover {
+a.btn:hover {
     background-color: #007f3a;
 }

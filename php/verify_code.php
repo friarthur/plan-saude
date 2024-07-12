@@ -16,38 +16,36 @@ if ($conn->connect_error) {
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email_unimed = filter_var($_POST['emailUnimed'], FILTER_SANITIZE_EMAIL);
-    $verification_code = filter_var($_POST['verificationCode'], FILTER_SANITIZE_SPECIAL_CHARS);
+    // Filtrar e validar o código de verificação
+    $verification_code1 = filter_input(INPUT_POST, 'verificationCode1', FILTER_SANITIZE_NUMBER_INT);
+    $verification_code2 = filter_input(INPUT_POST, 'verificationCode2', FILTER_SANITIZE_NUMBER_INT);
+    $verification_code3 = filter_input(INPUT_POST, 'verificationCode3', FILTER_SANITIZE_NUMBER_INT);
+    $verification_code4 = filter_input(INPUT_POST, 'verificationCode4', FILTER_SANITIZE_NUMBER_INT);
 
-    if (filter_var($email_unimed, FILTER_VALIDATE_EMAIL) && !empty($verification_code)) {
-        // Verificar se já existe um código ativo para este email
-        $stmt = $conn->prepare("SELECT id FROM verification_codes WHERE email_unimed = ? AND expires_at > NOW()");
-        $stmt->bind_param("s", $email_unimed);
-        $stmt->execute();
+    // Construir o código de verificação completo
+    $verification_code = $verification_code1 . $verification_code2 . $verification_code3 . $verification_code4;
+
+    // Verificar se o código está correto no banco de dados
+    $stmt = $conn->prepare("SELECT id FROM verification_codes WHERE code = ? AND expires_at > NOW()");
+    if ($stmt === false) {
+        die("Erro ao preparar a declaração: " . $conn->error);
+    }
+    $stmt->bind_param("s", $verification_code);
+    if ($stmt->execute()) {
         $stmt->store_result();
-        
         if ($stmt->num_rows > 0) {
-            // Se já existe um código ativo, não inserir um novo
-            echo "Já existe um código de verificação ativo para este email. Por favor, aguarde ou verifique sua caixa de entrada.";
+            $_SESSION['verification_code'] = $verification_code; // Guardar o código na sessão para uso posterior
+            header("Location: /html/reset_password.html"); // Redirecionar para a página de reset_password.html
+            exit();
         } else {
-            // Inserir um novo código de verificação com expiração em 90 segundos
-            $stmt = $conn->prepare("INSERT INTO verification_codes (email_unimed, code, expires_at) VALUES (?, ?, NOW() + INTERVAL 90 SECOND)");
-            if ($stmt === false) {
-                die("Erro ao preparar a declaração: " . $conn->error);
-            }
-            $stmt->bind_param("ss", $email_unimed, $verification_code);
-            if ($stmt->execute()) {
-                // Código inserido com sucesso
-                echo "Código de verificação enviado com sucesso. Por favor, verifique seu email.";
-            } else {
-                // Tratamento de erro ao inserir o código
-                die("Erro ao inserir código de verificação: " . $stmt->error);
-            }
-            $stmt->close();
+            // Código de verificação inválido
+            echo "Código de verificação inválido. Por favor, verifique novamente.";
         }
     } else {
-        echo "Email ou código de verificação inválido.";
+        // Tratamento de erro ao executar a declaração
+        die("Erro ao executar a declaração: " . $stmt->error);
     }
+    $stmt->close();
 }
 
 $conn->close();
