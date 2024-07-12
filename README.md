@@ -136,3 +136,77 @@ plan-saude/
 ├── index.php
 ├── README.md
 
+--version in english
+# Plan Saúde
+
+## Project Description
+
+**Plan Saúde** is a web system designed to manage health plans, allowing for user registration management, authentication, password recovery, and additional functionalities such as board game rental.
+
+This project aims to facilitate the management of health plan client information by providing a user-friendly and modern interface for users and administrators. Additionally, it includes a section dedicated to board game rental, providing a complete and integrated experience.
+
+## Main Features
+
+1. **User Registration**:
+   - Registration forms that allow users to create an account in the system.
+   - Data validation and secure storage of information in the MySQL database.
+
+2. **User Authentication**:
+   - Secure login with credential verification.
+   - User sessions to maintain authentication state.
+
+3. **Password Recovery**:
+   - Password recovery process involving email verification.
+   - Functionality to reset password using secure tokens.
+
+4. **Health Plan Management**:
+   - Tools to manage different health plans.
+   - Viewing and editing plan information.
+
+5. **Board Game Rental**:
+   - Interface to view, rent, and return board games.
+   - Return confirmation system to ensure secure processes.
+
+## Technologies Used
+
+- **PHP**: Programming language used for back-end development.
+- **MySQL**: Relational database used to store system information.
+- **Composer**: Dependency manager for PHP, used to install packages like PHPMailer.
+- **PHPMailer**: Email sending library used for user communication and verification.
+- **HTML/CSS/JavaScript**: Front-end technologies to build the user interface.
+
+## Project Structure
+
+The project is organized into several folders, each containing files related to different functionalities:
+
+- `css/`: CSS style files.
+- `html/`: HTML files for different site pages.
+- `img/`: Images used in the project.
+- `js/`: JavaScript scripts for interactive functionalities.
+- `php/`: PHP scripts for data manipulation and business logic.
+- `srcs/`: Source code library, including custom namespaces.
+- `sql/`: SQL scripts for database creation and manipulation.
+
+## Contribution
+
+Contributions to the project are welcome! Feel free to fork the repository and submit pull requests with improvements, bug fixes, or new features.
+
+## Index
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contribution](#contribution)
+- [License](#license)
+
+## Installation
+
+Clone the repository:
+
+```sh
+git clone https://github.com/friarthur/plan-saude.git
+cd plan-saude
+
+
