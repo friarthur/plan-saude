@@ -24,3 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Email</title>
+</head>
+<body>
+    <form action="php/send_verification_email.php" method="post">
+        <label for="emailUnimed">Email:</label>
+        <input type="email" id="emailUnimed" name="emailUnimed" required>
+        <button type="submit">Enviar Código de Verificação</button>
+    </form>
+</body>
+</html>
