@@ -76,7 +76,7 @@ nav ul li a:hover {
     background-color: #070707; 
 }
 .banner {
-    background: url('meico.png') no-repeat center center/cover;
+    background: url('/srcs/meico.png') no-repeat center center/cover;
     color: white;
     height: 100vh;
     display: flex;
@@ -524,4 +524,5 @@ footer p {
         background-color: #070707;
         color: #fff;
     }
+}
 }

@@ -63,13 +63,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
               // Geração do link de verificação
               $verification_link = $base_url . "/html/verify_code.html?code=" . urlencode($verification_code);
-
+              
+              $mail->CharSet = 'UTF-8'; // Define a codificação de caracteres para UTF-8
+              $mail->Encoding = 'base64'; // Define a codificação de transferência
+              
+              // Configuração do corpo do email
+              $mail->isHTML(true); // Define o email como formato HTML
+              $mail->Subject = 'Redefinação de e-mail.'; // Assunto do email
               // Conteúdo do email
               $mail->isHTML(true);
               $mail->Subject = 'Código de Verificação';
-              $mail->Body    = 'Seu código de verificação é: <b>' . $verification_code . '</b><br><br>'
-                              . 'Clique <a href="' . $verification_link . '">aqui</a> para verificar seu email.';
-
+              $mail->Body = 'Prezado usuário,<br><br>'
+              . 'Recebemos uma solicitação para verificar seu email. Para prosseguir com a verificação, utilize o código abaixo:<br><br>'
+              . '<b>' . $verification_code . '</b><br><br>'
+              . 'Este código é válido por um curto período de tempo. Por favor, clique no link abaixo para inserir o código e concluir o processo de verificação:<br><br>'
+              . '<a href="' . $verification_link . '">Clique aqui para verificar seu email</a><br><br>'
+              . 'Caso não tenha solicitado esta verificação, por favor ignore este email.<br><br>'
+              . 'Atenciosamente,<br>'
+              . 'Equipe de Suporte';
+  
               // Enviar email
                 $mail->send();
                 echo 'O email de verificação foi enviado.';

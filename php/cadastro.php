@@ -1,3 +1,5 @@
+
+
 <?php
 $servername = "localhost";
 $username = "root"; // Seu usuário do MySQL

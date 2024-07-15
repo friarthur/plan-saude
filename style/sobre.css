@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background: url('banner.png') no-repeat center center/cover;
+    background: url('/srcs/banner.png') no-repeat center center/cover;
     color: white;
     height: 70vh;
     display: flex;
